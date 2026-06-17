@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { BrinquedoCadastrar } from "./brinquedos/brinquedo-cadastrar/brinquedo-cadastrar";
+import { BrinquedoCadastrar } from './brinquedos/brinquedo-cadastrar/brinquedo-cadastrar';
 
 @Component({
   selector: 'app-root',

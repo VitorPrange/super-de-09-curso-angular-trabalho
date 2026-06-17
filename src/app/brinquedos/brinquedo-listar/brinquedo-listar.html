@@ -1,1 +1,36 @@
-<p>brinquedo-listar works!</p>
+<h1>Brinquedos</h1>
+
+<span>
+    Quantidade de brinquedos:
+    <strong>{{ brinquedos().length }}</strong>
+</span>
+
+<table>
+    <thead>
+        <tr>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @for(brinquedo of brinquedos(); track brinquedo.id){
+
+            <tr>
+                <td>{{ brinquedo.modelo }}</td>
+                <td>{{ brinquedo.marca }}</td>
+                <td>R$ {{ brinquedo.preco }}</td>
+                <td>{{ brinquedo.quantidade }}</td>
+                <td>
+                   <td>R$ {{ brinquedo.preco!.toFixed(2) }}
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
