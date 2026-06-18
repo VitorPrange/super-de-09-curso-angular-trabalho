@@ -23,10 +23,12 @@
             <tr>
                 <td>{{ brinquedo.modelo }}</td>
                 <td>{{ brinquedo.marca }}</td>
-                <td>R$ {{ brinquedo.preco }}</td>
+                <td>R$ {{brinquedo.preco }}</td>
                 <td>{{ brinquedo.quantidade }}</td>
                 <td>
-                    <button routerLink="/brinquedos-brinquedo-editar/{{brinquedo.id}}">Editar</button>
+                    <button [routerLink]="['/editar', brinquedo.id]">
+  Editar
+</button>
                     <button (click)="apagar(brinquedo.id!)">Excluir</button>
             </tr>
 

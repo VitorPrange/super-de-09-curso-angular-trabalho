@@ -31,7 +31,7 @@ export class BrinquedoEditar {
     const brinquedoStrings = localStorage.getItem("brinquedos");
     if (brinquedoStrings === null) {
       alert("Nenhum brinquedo cadastrado")
-      router.navigate(["/brinquedos"]);
+      router.navigate(["/listar"]);
       return;
     }
     debugger
@@ -39,7 +39,7 @@ export class BrinquedoEditar {
     const brinquedosEncontrados = brinquedos.filter(brinquedo => brinquedo.id === idParaEditar);
     if (brinquedosEncontrados.length === 0) {
       alert("Briquedo não econtrado")
-      router.navigate(["/brinquedos"]);
+      router.navigate(["/listar"]);
       return;
     }
 
@@ -61,7 +61,7 @@ export class BrinquedoEditar {
 
     alert("Cliente alterado com sucesso");
 
-    this.router.navigate(["/clientes"]);
+    this.router.navigate(["/listar"]);
   }
 
   carregarBrinquedosDoLocalStorage(): BrinquedoModel[] {

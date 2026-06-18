@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class BrinquedoCadastrar {
   brinquedo = signal<BrinquedoModel>({
-    id: '',
+    id: crypto.randomUUID(),
     marca: '',
     modelo: '',
     quantidade: null,
@@ -28,10 +28,18 @@ export class BrinquedoCadastrar {
 
     alert("Brinquedo cadastrado com sucesso");
 
+    this.brinquedo.set({
+    id: crypto.randomUUID(),
+    marca: '',
+    modelo: '',
+    quantidade: null,
+    preco: null
+  });
+
   }
 
   carregarBrinquedosDoLocalStorage(): BrinquedoModel[] {
-    const brinquedosString = localStorage.getItem("Brinquedos");
+    const brinquedosString = localStorage.getItem("brinquedos");
 
     if (brinquedosString === null) {
       return [];

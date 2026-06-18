@@ -5,11 +5,11 @@
     id="modelo" placeholder="Modelo do brinquedo">
 
 <label for="preco"> Preço </label>
-<input type="text" id="preco" name="preco" [(ngModel)]="brinquedo().preco"
+<input type="number" id="preco" name="preco" [(ngModel)]="brinquedo().preco"
     id="preco" placeholder="Preço do brinquedo">
 
 <label for="quantidade"> Quantidade </label>
-<input type="text" id="quantidade" name="quantidade" [(ngModel)]="brinquedo().quantidade"
+<input type="number" id="quantidade" name="quantidade" [(ngModel)]="brinquedo().quantidade"
     id="quantidade" placeholder="Quantidade do brinquedo">
 
 <label for="marca">Marca</label>
@@ -23,4 +23,3 @@
 <button (click)="salvar()">Salvar</button>
 
 <button routerLink="listar">listar</button>
-<button routerLink="editar">editar</button>
