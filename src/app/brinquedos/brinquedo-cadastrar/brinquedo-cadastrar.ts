@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrinquedoModel } from '../../models/brinquedo.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-brinquedo-cadastrar',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './brinquedo-cadastrar.html',
   styleUrl: './brinquedo-cadastrar.scss',
 })

@@ -12,7 +12,7 @@
             <th>Marca</th>
             <th>Preço</th>
             <th>Quantidade</th>
-            <th>Total</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -26,8 +26,8 @@
                 <td>R$ {{ brinquedo.preco }}</td>
                 <td>{{ brinquedo.quantidade }}</td>
                 <td>
-                   <td>R$ {{ brinquedo.preco!.toFixed(2) }}
-                </td>
+                    <button routerLink="/brinquedos-brinquedo-editar/{{brinquedo.id}}">Editar</button>
+                    <button (click)="apagar(brinquedo.id!)">Excluir</button>
             </tr>
 
         }
